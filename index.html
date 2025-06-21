@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Calculator</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Theme Toggle -->
+<div class="theme-toggle" id="themeToggle">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-brightness-high" viewBox="0 0 16 16">
+    <path d="M8 4.5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 0 1 0-7zM8 0a.5.5 0 0 1 .5.5v1.027a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 8 0zm0 13.973a.5.5 0 0 1 .5.5v1.027a.5.5 0 0 1-1 0v-1.027a.5.5 0 0 1 .5-.5zm6.5-5.473a.5.5 0 0 1 .5.5H14a.5.5 0 0 1 0-1h1.027a.5.5 0 0 1 .5.5zM1.027 8a.5.5 0 0 1 .5-.5H2a.5.5 0 0 1 0 1H1.527a.5.5 0 0 1-.5-.5zm11.31-4.21a.5.5 0 0 1 .707 0l.728.728a.5.5 0 0 1-.707.707l-.728-.728a.5.5 0 0 1 0-.707zm-9.376 9.376a.5.5 0 0 1 .707 0l.728.728a.5.5 0 0 1-.707.707l-.728-.728a.5.5 0 0 1 0-.707zM4.146 3.146a.5.5 0 0 1 .707 0L5.58 4.12a.5.5 0 1 1-.707.707L4.146 3.853a.5.5 0 0 1 0-.707zm7.708 7.708a.5.5 0 0 1 .707 0l.728.728a.5.5 0 0 1-.707.707l-.728-.728a.5.5 0 0 1 0-.707z"/>
+  </svg>
+</div>
+
+<div class="calculator-container">
+  <div class="calculator">
+
+    <!-- Display -->
+    <div class="display">
+      <div class="display-secondary" id="secondaryDisplay"></div>
+      <div class="display-main" id="mainDisplay">0</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <!-- First row -->
+      <button class="btn btn-danger" data-action="clear">AC</button>
+      <button class="btn btn-secondary" data-action="square">x²</button>
+      <button class="btn btn-secondary" data-action="operator" data-operator="%">%</button>
+      <button class="btn btn-primary" data-action="operator" data-operator="/">÷</button>
+
+      <!-- Second row -->
+      <button class="btn btn-light" data-action="number" data-number="7">7</button>
+      <button class="btn btn-light" data-action="number" data-number="8">8</button>
+      <button class="btn btn-light" data-action="number" data-number="9">9</button>
+      <button class="btn btn-primary" data-action="operator" data-operator="*">×</button>
+
+      <!-- Third row -->
+      <button class="btn btn-light" data-action="number" data-number="4">4</button>
+      <button class="btn btn-light" data-action="number" data-number="5">5</button>
+      <button class="btn btn-light" data-action="number" data-number="6">6</button>
+      <button class="btn btn-primary" data-action="operator" data-operator="-">−</button>
+
+      <!-- Fourth row -->
+      <button class="btn btn-light" data-action="number" data-number="1">1</button>
+      <button class="btn btn-light" data-action="number" data-number="2">2</button>
+      <button class="btn btn-light" data-action="number" data-number="3">3</button>
+      <button class="btn btn-primary" data-action="operator" data-operator="+">+</button>
+
+      <!-- Fifth row -->
+      <button class="btn btn-light btn-span-2" data-action="number" data-number="0">0</button>
+      <button class="btn btn-light" data-action="decimal">.</button>
+      <button class="btn btn-success" data-action="calculate">=</button>
+    </div>
+  </div>
+
+  <!-- History Panel -->
+  <div class="history-panel mt-3">
+    <h5 class="mb-3">History</h5>
+    <div id="historyList">
+      <div class="text-center text-muted">No calculations yet</div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
